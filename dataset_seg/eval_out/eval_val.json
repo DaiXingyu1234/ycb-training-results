@@ -1,0 +1,82 @@
+{
+  "split": "val",
+  "num_samples": 180,
+  "crop": true,
+  "miou_all": 0.976659188840809,
+  "miou_fg": 0.9747100496561666,
+  "mean_dice_fg": 0.9871784724346254,
+  "per_class": {
+    "background": {
+      "iou": 0.986404884764022,
+      "dice": 0.9931559193494467,
+      "pixel_acc": 0.9872798625879157
+    },
+    "apple": {
+      "iou": 0.9845773957498597,
+      "dice": 0.9922287715847368,
+      "pixel_acc": 0.9991044795879864
+    },
+    "tuna_fish_can": {
+      "iou": 0.975697541055536,
+      "dice": 0.9876993019227628,
+      "pixel_acc": 0.9988305855924907
+    },
+    "plastic_bottle": {
+      "iou": 0.9614724833216907,
+      "dice": 0.9803578602269942,
+      "pixel_acc": 0.9966290567628087
+    },
+    "power_drill": {
+      "iou": 0.9744627003273277,
+      "dice": 0.9870662030392174,
+      "pixel_acc": 0.9975602094794905
+    },
+    "wood_block": {
+      "iou": 0.9773401278264189,
+      "dice": 0.9885402253994158,
+      "pixel_acc": 0.9990531386705158
+    }
+  },
+  "classification": {
+    "overall_acc": 1.0,
+    "per_class_acc": {
+      "apple": 1.0,
+      "tuna_fish_can": 1.0,
+      "plastic_bottle": 1.0,
+      "power_drill": 1.0,
+      "wood_block": 1.0
+    },
+    "per_class_correct": {
+      "apple": 36,
+      "tuna_fish_can": 36,
+      "plastic_bottle": 36,
+      "power_drill": 36,
+      "wood_block": 36
+    },
+    "per_class_total": {
+      "apple": 36,
+      "tuna_fish_can": 36,
+      "plastic_bottle": 36,
+      "power_drill": 36,
+      "wood_block": 36
+    },
+    "undetected": 0,
+    "confusion_matrix": {
+      "apple": {
+        "apple": 36
+      },
+      "tuna_fish_can": {
+        "tuna_fish_can": 36
+      },
+      "plastic_bottle": {
+        "plastic_bottle": 36
+      },
+      "power_drill": {
+        "power_drill": 36
+      },
+      "wood_block": {
+        "wood_block": 36
+      }
+    }
+  }
+}

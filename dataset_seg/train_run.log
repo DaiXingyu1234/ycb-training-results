@@ -1,0 +1,384 @@
+nohup: ignoring input
+/home/dxy/miniconda3/envs/vbc/lib/python3.8/site-packages/transformers/utils/deprecation.py:165: UserWarning: The following named arguments are not valid for `SegformerImageProcessor.__init__` and were ignored: 'feature_extractor_type'
+  return func(*args, **kwargs)
+Some weights of SegformerForSemanticSegmentation were not initialized from the model checkpoint at /home/dxy/projects/ycb/dataset_seg/pretrained/segformer-b0-ade and are newly initialized because the shapes did not match:
+- decode_head.classifier.bias: found shape torch.Size([150]) in the checkpoint and torch.Size([6]) in the model instantiated
+- decode_head.classifier.weight: found shape torch.Size([150, 256, 1, 1]) in the checkpoint and torch.Size([6, 256, 1, 1]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+数据集根目录: /home/dxy/projects/ycb/dataset_seg   (当前目录)
+环境: python=3.8.20 torch=2.0.1+cu117 cuda=True
+  (自动使用本地权重目录 /home/dxy/projects/ycb/dataset_seg/pretrained/segformer-b0-ade)
+模型来源: /home/dxy/projects/ycb/dataset_seg/pretrained/segformer-b0-ade
+  (已开启离线模式，不会访问网络)
+总样本=900 训练=720 验证=180 尺寸={'height': 512, 'width': 512} 裁剪=True bs=16 accum=1 fp16=True
+类别表: {0: 'background', 1: 'apple', 2: 'tuna_fish_can', 3: 'plastic_bottle', 4: 'power_drill', 5: 'wood_block'}
+每 epoch 步数=45 总步数=4500 warmup=450
+  ep1 step 20/4500 lr=2.67e-06 loss=2.6409
+  ep1 step 40/4500 lr=5.33e-06 loss=2.6271
+ep001 lr=6.00e-06 | train 2.6160 val 2.4481 | miou_all 0.0926 【miou_fg 0.1071】 | apple 0.205 tuna_fish_can 0.214 plastic_bottle 0.071 power_drill 0.044 wood_block 0.001 | 10s
+  -> 新高，已保存 best (miou_fg=0.1071)
+  ep2 step 60/4500 lr=8.00e-06 loss=2.4592
+  ep2 step 80/4500 lr=1.07e-05 loss=2.3672
+ep002 lr=1.20e-05 | train 2.3150 val 1.9631 | miou_all 0.3995 【miou_fg 0.4248】 | apple 0.807 tuna_fish_can 0.343 plastic_bottle 0.136 power_drill 0.277 wood_block 0.561 | 8s
+  -> 新高，已保存 best (miou_fg=0.4248)
+  ep3 step 100/4500 lr=1.33e-05 loss=2.0481
+  ep3 step 120/4500 lr=1.60e-05 loss=1.9649
+ep003 lr=1.80e-05 | train 1.8988 val 1.4922 | miou_all 0.6338 【miou_fg 0.6169】 | apple 0.773 tuna_fish_can 0.707 plastic_bottle 0.270 power_drill 0.565 wood_block 0.769 | 9s
+  -> 新高，已保存 best (miou_fg=0.6169)
+  ep4 step 140/4500 lr=1.87e-05 loss=1.6623
+  ep4 step 160/4500 lr=2.13e-05 loss=1.6024
+  ep4 step 180/4500 lr=2.40e-05 loss=1.5172
+ep004 lr=2.40e-05 | train 1.5172 val 1.2139 | miou_all 0.6994 【miou_fg 0.6723】 | apple 0.773 tuna_fish_can 0.760 plastic_bottle 0.497 power_drill 0.592 wood_block 0.740 | 9s
+  -> 新高，已保存 best (miou_fg=0.6723)
+  ep5 step 200/4500 lr=2.67e-05 loss=1.3312
+  ep5 step 220/4500 lr=2.93e-05 loss=1.2811
+ep005 lr=3.00e-05 | train 1.2707 val 1.0576 | miou_all 0.7301 【miou_fg 0.7047】 | apple 0.785 tuna_fish_can 0.778 plastic_bottle 0.644 power_drill 0.577 wood_block 0.740 | 9s
+  -> 新高，已保存 best (miou_fg=0.7047)
+  ep6 step 240/4500 lr=3.20e-05 loss=1.1994
+  ep6 step 260/4500 lr=3.47e-05 loss=1.1593
+ep006 lr=3.60e-05 | train 1.1482 val 0.9727 | miou_all 0.7395 【miou_fg 0.7130】 | apple 0.777 tuna_fish_can 0.768 plastic_bottle 0.680 power_drill 0.599 wood_block 0.741 | 9s
+  -> 新高，已保存 best (miou_fg=0.7130)
+  ep7 step 280/4500 lr=3.73e-05 loss=1.0364
+  ep7 step 300/4500 lr=4.00e-05 loss=1.0234
+ep007 lr=4.20e-05 | train 1.0054 val 0.8646 | miou_all 0.7598 【miou_fg 0.7353】 | apple 0.790 tuna_fish_can 0.792 plastic_bottle 0.684 power_drill 0.629 wood_block 0.781 | 9s
+  -> 新高，已保存 best (miou_fg=0.7353)
+  ep8 step 320/4500 lr=4.27e-05 loss=0.9053
+  ep8 step 340/4500 lr=4.53e-05 loss=0.9103
+  ep8 step 360/4500 lr=4.80e-05 loss=0.8800
+ep008 lr=4.80e-05 | train 0.8800 val 0.7814 | miou_all 0.7718 【miou_fg 0.7474】 | apple 0.794 tuna_fish_can 0.790 plastic_bottle 0.721 power_drill 0.647 wood_block 0.784 | 9s
+  -> 新高，已保存 best (miou_fg=0.7474)
+  ep9 step 380/4500 lr=5.07e-05 loss=0.8071
+  ep9 step 400/4500 lr=5.33e-05 loss=0.7922
+ep009 lr=5.40e-05 | train 0.7893 val 0.6706 | miou_all 0.7831 【miou_fg 0.7595】 | apple 0.814 tuna_fish_can 0.809 plastic_bottle 0.720 power_drill 0.666 wood_block 0.787 | 9s
+  -> 新高，已保存 best (miou_fg=0.7595)
+  ep10 step 420/4500 lr=5.60e-05 loss=0.6836
+  ep10 step 440/4500 lr=5.87e-05 loss=0.6966
+ep010 lr=6.00e-05 | train 0.6834 val 0.5764 | miou_all 0.8021 【miou_fg 0.7805】 | apple 0.816 tuna_fish_can 0.809 plastic_bottle 0.756 power_drill 0.710 wood_block 0.811 | 9s
+  -> 新高，已保存 best (miou_fg=0.7805)
+  ep11 step 460/4500 lr=5.99e-05 loss=0.6720
+  ep11 step 480/4500 lr=5.96e-05 loss=0.6330
+ep011 lr=5.94e-05 | train 0.6084 val 0.5054 | miou_all 0.8124 【miou_fg 0.7919】 | apple 0.840 tuna_fish_can 0.822 plastic_bottle 0.760 power_drill 0.720 wood_block 0.818 | 9s
+  -> 新高，已保存 best (miou_fg=0.7919)
+  ep12 step 500/4500 lr=5.93e-05 loss=0.5112
+  ep12 step 520/4500 lr=5.91e-05 loss=0.5059
+  ep12 step 540/4500 lr=5.88e-05 loss=0.4925
+ep012 lr=5.88e-05 | train 0.4925 val 0.4406 | miou_all 0.8415 【miou_fg 0.8228】 | apple 0.866 tuna_fish_can 0.855 plastic_bottle 0.796 power_drill 0.758 wood_block 0.839 | 8s
+  -> 新高，已保存 best (miou_fg=0.8228)
+  ep13 step 560/4500 lr=5.85e-05 loss=0.4511
+  ep13 step 580/4500 lr=5.83e-05 loss=0.4337
+ep013 lr=5.82e-05 | train 0.4301 val 0.3675 | miou_all 0.8540 【miou_fg 0.8380】 | apple 0.876 tuna_fish_can 0.864 plastic_bottle 0.813 power_drill 0.781 wood_block 0.857 | 9s
+  -> 新高，已保存 best (miou_fg=0.8380)
+  ep14 step 600/4500 lr=5.80e-05 loss=0.3905
+  ep14 step 620/4500 lr=5.77e-05 loss=0.3875
+ep014 lr=5.76e-05 | train 0.3772 val 0.3272 | miou_all 0.8731 【miou_fg 0.8585】 | apple 0.895 tuna_fish_can 0.900 plastic_bottle 0.815 power_drill 0.816 wood_block 0.867 | 9s
+  -> 新高，已保存 best (miou_fg=0.8585)
+  ep15 step 640/4500 lr=5.75e-05 loss=0.3116
+  ep15 step 660/4500 lr=5.72e-05 loss=0.3272
+ep015 lr=5.70e-05 | train 0.3290 val 0.2828 | miou_all 0.8914 【miou_fg 0.8796】 | apple 0.913 tuna_fish_can 0.912 plastic_bottle 0.833 power_drill 0.842 wood_block 0.898 | 8s
+  -> 新高，已保存 best (miou_fg=0.8796)
+  ep16 step 680/4500 lr=5.69e-05 loss=0.2857
+  ep16 step 700/4500 lr=5.67e-05 loss=0.2938
+  ep16 step 720/4500 lr=5.64e-05 loss=0.2881
+ep016 lr=5.64e-05 | train 0.2881 val 0.2666 | miou_all 0.8974 【miou_fg 0.8848】 | apple 0.916 tuna_fish_can 0.917 plastic_bottle 0.841 power_drill 0.845 wood_block 0.905 | 8s
+  -> 新高，已保存 best (miou_fg=0.8848)
+  ep17 step 740/4500 lr=5.61e-05 loss=0.2668
+  ep17 step 760/4500 lr=5.59e-05 loss=0.2675
+ep017 lr=5.58e-05 | train 0.2620 val 0.2303 | miou_all 0.9201 【miou_fg 0.9103】 | apple 0.943 tuna_fish_can 0.935 plastic_bottle 0.866 power_drill 0.883 wood_block 0.925 | 8s
+  -> 新高，已保存 best (miou_fg=0.9103)
+  ep18 step 780/4500 lr=5.56e-05 loss=0.2395
+  ep18 step 800/4500 lr=5.53e-05 loss=0.2393
+ep018 lr=5.52e-05 | train 0.2367 val 0.2100 | miou_all 0.9265 【miou_fg 0.9177】 | apple 0.945 tuna_fish_can 0.942 plastic_bottle 0.884 power_drill 0.888 wood_block 0.930 | 8s
+  -> 新高，已保存 best (miou_fg=0.9177)
+  ep19 step 820/4500 lr=5.51e-05 loss=0.2163
+  ep19 step 840/4500 lr=5.48e-05 loss=0.2224
+ep019 lr=5.46e-05 | train 0.2190 val 0.1842 | miou_all 0.9378 【miou_fg 0.9305】 | apple 0.960 tuna_fish_can 0.952 plastic_bottle 0.877 power_drill 0.922 wood_block 0.942 | 8s
+  -> 新高，已保存 best (miou_fg=0.9305)
+  ep20 step 860/4500 lr=5.45e-05 loss=0.2297
+  ep20 step 880/4500 lr=5.42e-05 loss=0.2019
+  ep20 step 900/4500 lr=5.40e-05 loss=0.2027
+ep020 lr=5.40e-05 | train 0.2027 val 0.1766 | miou_all 0.9404 【miou_fg 0.9331】 | apple 0.958 tuna_fish_can 0.953 plastic_bottle 0.886 power_drill 0.922 wood_block 0.947 | 8s
+  -> 新高，已保存 best (miou_fg=0.9331)
+  ep21 step 920/4500 lr=5.37e-05 loss=0.1988
+  ep21 step 940/4500 lr=5.34e-05 loss=0.1756
+ep021 lr=5.34e-05 | train 0.1851 val 0.1607 | miou_all 0.9426 【miou_fg 0.9358】 | apple 0.964 tuna_fish_can 0.956 plastic_bottle 0.876 power_drill 0.933 wood_block 0.950 | 8s
+  -> 新高，已保存 best (miou_fg=0.9358)
+  ep22 step 960/4500 lr=5.32e-05 loss=0.1934
+  ep22 step 980/4500 lr=5.29e-05 loss=0.1709
+ep022 lr=5.28e-05 | train 0.1638 val 0.1560 | miou_all 0.9442 【miou_fg 0.9375】 | apple 0.966 tuna_fish_can 0.955 plastic_bottle 0.882 power_drill 0.931 wood_block 0.955 | 9s
+  -> 新高，已保存 best (miou_fg=0.9375)
+  ep23 step 1000/4500 lr=5.26e-05 loss=0.1460
+  ep23 step 1020/4500 lr=5.24e-05 loss=0.1480
+ep023 lr=5.22e-05 | train 0.1450 val 0.1416 | miou_all 0.9529 【miou_fg 0.9472】 | apple 0.973 tuna_fish_can 0.961 plastic_bottle 0.905 power_drill 0.938 wood_block 0.959 | 9s
+  -> 新高，已保存 best (miou_fg=0.9472)
+  ep24 step 1040/4500 lr=5.21e-05 loss=0.1933
+  ep24 step 1060/4500 lr=5.18e-05 loss=0.1374
+  ep24 step 1080/4500 lr=5.15e-05 loss=0.1400
+ep024 lr=5.15e-05 | train 0.1400 val 0.1334 | miou_all 0.9536 【miou_fg 0.9478】 | apple 0.970 tuna_fish_can 0.962 plastic_bottle 0.904 power_drill 0.941 wood_block 0.962 | 9s
+  -> 新高，已保存 best (miou_fg=0.9478)
+  ep25 step 1100/4500 lr=5.13e-05 loss=0.1275
+  ep25 step 1120/4500 lr=5.10e-05 loss=0.1208
+ep025 lr=5.09e-05 | train 0.1206 val 0.1243 | miou_all 0.9563 【miou_fg 0.9511】 | apple 0.971 tuna_fish_can 0.965 plastic_bottle 0.909 power_drill 0.951 wood_block 0.960 | 9s
+  -> 新高，已保存 best (miou_fg=0.9511)
+  ep26 step 1140/4500 lr=5.07e-05 loss=0.1172
+  ep26 step 1160/4500 lr=5.05e-05 loss=0.1204
+ep026 lr=5.03e-05 | train 0.1230 val 0.1195 | miou_all 0.9593 【miou_fg 0.9543】 | apple 0.972 tuna_fish_can 0.963 plastic_bottle 0.924 power_drill 0.953 wood_block 0.961 | 9s
+  -> 新高，已保存 best (miou_fg=0.9543)
+  ep27 step 1180/4500 lr=5.02e-05 loss=0.1474
+  ep27 step 1200/4500 lr=4.99e-05 loss=0.1289
+ep027 lr=4.97e-05 | train 0.1248 val 0.1126 | miou_all 0.9612 【miou_fg 0.9565】 | apple 0.973 tuna_fish_can 0.966 plastic_bottle 0.924 power_drill 0.957 wood_block 0.963 | 9s
+  -> 新高，已保存 best (miou_fg=0.9565)
+  ep28 step 1220/4500 lr=4.96e-05 loss=0.1590
+  ep28 step 1240/4500 lr=4.94e-05 loss=0.1213
+  ep28 step 1260/4500 lr=4.91e-05 loss=0.1147
+ep028 lr=4.91e-05 | train 0.1147 val 0.1079 | miou_all 0.9611 【miou_fg 0.9564】 | apple 0.973 tuna_fish_can 0.967 plastic_bottle 0.926 power_drill 0.954 wood_block 0.961 | 8s
+  ep29 step 1280/4500 lr=4.88e-05 loss=0.1285
+  ep29 step 1300/4500 lr=4.86e-05 loss=0.1187
+ep029 lr=4.85e-05 | train 0.1152 val 0.1059 | miou_all 0.9664 【miou_fg 0.9623】 | apple 0.979 tuna_fish_can 0.968 plastic_bottle 0.942 power_drill 0.955 wood_block 0.966 | 8s
+  -> 新高，已保存 best (miou_fg=0.9623)
+  ep30 step 1320/4500 lr=4.83e-05 loss=0.1264
+  ep30 step 1340/4500 lr=4.80e-05 loss=0.1071
+ep030 lr=4.79e-05 | train 0.1074 val 0.1036 | miou_all 0.9610 【miou_fg 0.9564】 | apple 0.978 tuna_fish_can 0.968 plastic_bottle 0.911 power_drill 0.957 wood_block 0.968 | 9s
+  ep31 step 1360/4500 lr=4.77e-05 loss=0.0909
+  ep31 step 1380/4500 lr=4.75e-05 loss=0.1008
+ep031 lr=4.73e-05 | train 0.1109 val 0.0988 | miou_all 0.9640 【miou_fg 0.9597】 | apple 0.976 tuna_fish_can 0.966 plastic_bottle 0.933 power_drill 0.958 wood_block 0.965 | 9s
+  ep32 step 1400/4500 lr=4.72e-05 loss=0.1056
+  ep32 step 1420/4500 lr=4.69e-05 loss=0.1008
+  ep32 step 1440/4500 lr=4.66e-05 loss=0.0999
+ep032 lr=4.66e-05 | train 0.0999 val 0.0949 | miou_all 0.9658 【miou_fg 0.9616】 | apple 0.978 tuna_fish_can 0.967 plastic_bottle 0.935 power_drill 0.960 wood_block 0.968 | 9s
+  ep33 step 1460/4500 lr=4.64e-05 loss=0.1198
+  ep33 step 1480/4500 lr=4.61e-05 loss=0.1056
+ep033 lr=4.60e-05 | train 0.1045 val 0.0945 | miou_all 0.9650 【miou_fg 0.9608】 | apple 0.972 tuna_fish_can 0.969 plastic_bottle 0.936 power_drill 0.963 wood_block 0.963 | 9s
+  ep34 step 1500/4500 lr=4.58e-05 loss=0.0789
+  ep34 step 1520/4500 lr=4.55e-05 loss=0.0852
+ep034 lr=4.54e-05 | train 0.0900 val 0.0932 | miou_all 0.9676 【miou_fg 0.9637】 | apple 0.980 tuna_fish_can 0.969 plastic_bottle 0.933 power_drill 0.961 wood_block 0.974 | 8s
+  -> 新高，已保存 best (miou_fg=0.9637)
+  ep35 step 1540/4500 lr=4.53e-05 loss=0.0940
+  ep35 step 1560/4500 lr=4.50e-05 loss=0.0919
+ep035 lr=4.48e-05 | train 0.0846 val 0.0918 | miou_all 0.9702 【miou_fg 0.9664】 | apple 0.981 tuna_fish_can 0.973 plastic_bottle 0.941 power_drill 0.964 wood_block 0.972 | 9s
+  -> 新高，已保存 best (miou_fg=0.9664)
+  ep36 step 1580/4500 lr=4.47e-05 loss=0.0946
+  ep36 step 1600/4500 lr=4.44e-05 loss=0.0917
+  ep36 step 1620/4500 lr=4.42e-05 loss=0.0827
+ep036 lr=4.42e-05 | train 0.0827 val 0.0873 | miou_all 0.9703 【miou_fg 0.9668】 | apple 0.981 tuna_fish_can 0.971 plastic_bottle 0.943 power_drill 0.965 wood_block 0.974 | 9s
+  -> 新高，已保存 best (miou_fg=0.9668)
+  ep37 step 1640/4500 lr=4.39e-05 loss=0.1038
+  ep37 step 1660/4500 lr=4.36e-05 loss=0.1002
+ep037 lr=4.35e-05 | train 0.0954 val 0.0881 | miou_all 0.9697 【miou_fg 0.9659】 | apple 0.979 tuna_fish_can 0.966 plastic_bottle 0.951 power_drill 0.962 wood_block 0.971 | 9s
+  ep38 step 1680/4500 lr=4.33e-05 loss=0.0939
+  ep38 step 1700/4500 lr=4.31e-05 loss=0.1017
+ep038 lr=4.29e-05 | train 0.1190 val 0.2584 | miou_all 0.8705 【miou_fg 0.8471】 | apple 0.745 tuna_fish_can 0.968 plastic_bottle 0.924 power_drill 0.968 wood_block 0.630 | 8s
+  ep39 step 1720/4500 lr=4.28e-05 loss=0.0968
+  ep39 step 1740/4500 lr=4.25e-05 loss=0.1002
+ep039 lr=4.23e-05 | train 0.0925 val 0.0868 | miou_all 0.9709 【miou_fg 0.9673】 | apple 0.983 tuna_fish_can 0.970 plastic_bottle 0.945 power_drill 0.968 wood_block 0.971 | 9s
+  -> 新高，已保存 best (miou_fg=0.9673)
+  ep40 step 1760/4500 lr=4.22e-05 loss=0.0672
+  ep40 step 1780/4500 lr=4.19e-05 loss=0.1025
+  ep40 step 1800/4500 lr=4.17e-05 loss=0.0886
+ep040 lr=4.17e-05 | train 0.0886 val 0.0840 | miou_all 0.9704 【miou_fg 0.9667】 | apple 0.982 tuna_fish_can 0.974 plastic_bottle 0.942 power_drill 0.966 wood_block 0.969 | 9s
+  ep41 step 1820/4500 lr=4.14e-05 loss=0.0808
+  ep41 step 1840/4500 lr=4.11e-05 loss=0.0865
+ep041 lr=4.10e-05 | train 0.0871 val 0.0806 | miou_all 0.9700 【miou_fg 0.9662】 | apple 0.980 tuna_fish_can 0.972 plastic_bottle 0.946 power_drill 0.962 wood_block 0.971 | 8s
+  ep42 step 1860/4500 lr=4.08e-05 loss=0.0571
+  ep42 step 1880/4500 lr=4.06e-05 loss=0.0747
+ep042 lr=4.04e-05 | train 0.0803 val 0.0811 | miou_all 0.9701 【miou_fg 0.9664】 | apple 0.982 tuna_fish_can 0.973 plastic_bottle 0.936 power_drill 0.968 wood_block 0.972 | 9s
+  ep43 step 1900/4500 lr=4.03e-05 loss=0.1219
+  ep43 step 1920/4500 lr=4.00e-05 loss=0.0919
+ep043 lr=3.98e-05 | train 0.0823 val 0.0807 | miou_all 0.9709 【miou_fg 0.9673】 | apple 0.982 tuna_fish_can 0.970 plastic_bottle 0.945 power_drill 0.967 wood_block 0.972 | 9s
+  -> 新高，已保存 best (miou_fg=0.9673)
+  ep44 step 1940/4500 lr=3.97e-05 loss=0.0564
+  ep44 step 1960/4500 lr=3.94e-05 loss=0.0634
+  ep44 step 1980/4500 lr=3.92e-05 loss=0.0666
+ep044 lr=3.92e-05 | train 0.0666 val 0.0803 | miou_all 0.9710 【miou_fg 0.9674】 | apple 0.981 tuna_fish_can 0.974 plastic_bottle 0.940 power_drill 0.967 wood_block 0.975 | 8s
+  -> 新高，已保存 best (miou_fg=0.9674)
+  ep45 step 2000/4500 lr=3.89e-05 loss=0.0745
+  ep45 step 2020/4500 lr=3.86e-05 loss=0.0700
+ep045 lr=3.85e-05 | train 0.0712 val 0.0812 | miou_all 0.9717 【miou_fg 0.9680】 | apple 0.982 tuna_fish_can 0.973 plastic_bottle 0.940 power_drill 0.973 wood_block 0.972 | 8s
+  -> 新高，已保存 best (miou_fg=0.9680)
+  ep46 step 2040/4500 lr=3.83e-05 loss=0.0618
+  ep46 step 2060/4500 lr=3.80e-05 loss=0.0739
+ep046 lr=3.79e-05 | train 0.0723 val 0.0764 | miou_all 0.9741 【miou_fg 0.9709】 | apple 0.983 tuna_fish_can 0.971 plastic_bottle 0.952 power_drill 0.971 wood_block 0.978 | 8s
+  -> 新高，已保存 best (miou_fg=0.9709)
+  ep47 step 2080/4500 lr=3.78e-05 loss=0.0646
+  ep47 step 2100/4500 lr=3.75e-05 loss=0.0613
+ep047 lr=3.73e-05 | train 0.0600 val 0.0762 | miou_all 0.9739 【miou_fg 0.9708】 | apple 0.983 tuna_fish_can 0.973 plastic_bottle 0.951 power_drill 0.970 wood_block 0.978 | 8s
+  ep48 step 2120/4500 lr=3.72e-05 loss=0.0478
+  ep48 step 2140/4500 lr=3.69e-05 loss=0.0614
+  ep48 step 2160/4500 lr=3.66e-05 loss=0.0665
+ep048 lr=3.66e-05 | train 0.0665 val 0.0747 | miou_all 0.9718 【miou_fg 0.9685】 | apple 0.983 tuna_fish_can 0.973 plastic_bottle 0.944 power_drill 0.967 wood_block 0.976 | 8s
+  ep49 step 2180/4500 lr=3.64e-05 loss=0.0490
+  ep49 step 2200/4500 lr=3.61e-05 loss=0.0565
+ep049 lr=3.60e-05 | train 0.0585 val 0.0753 | miou_all 0.9732 【miou_fg 0.9700】 | apple 0.983 tuna_fish_can 0.972 plastic_bottle 0.951 power_drill 0.969 wood_block 0.975 | 9s
+  ep50 step 2220/4500 lr=3.58e-05 loss=0.0816
+  ep50 step 2240/4500 lr=3.55e-05 loss=0.0723
+ep050 lr=3.54e-05 | train 0.0667 val 0.0746 | miou_all 0.9722 【miou_fg 0.9689】 | apple 0.982 tuna_fish_can 0.975 plastic_bottle 0.944 power_drill 0.967 wood_block 0.976 | 9s
+  ep51 step 2260/4500 lr=3.52e-05 loss=0.0753
+  ep51 step 2280/4500 lr=3.49e-05 loss=0.0707
+ep051 lr=3.47e-05 | train 0.0768 val 0.0743 | miou_all 0.9723 【miou_fg 0.9690】 | apple 0.983 tuna_fish_can 0.974 plastic_bottle 0.942 power_drill 0.971 wood_block 0.975 | 9s
+  ep52 step 2300/4500 lr=3.47e-05 loss=0.0415
+  ep52 step 2320/4500 lr=3.44e-05 loss=0.0702
+  ep52 step 2340/4500 lr=3.41e-05 loss=0.0687
+ep052 lr=3.41e-05 | train 0.0687 val 0.0733 | miou_all 0.9749 【miou_fg 0.9718】 | apple 0.982 tuna_fish_can 0.976 plastic_bottle 0.954 power_drill 0.971 wood_block 0.976 | 9s
+  -> 新高，已保存 best (miou_fg=0.9718)
+  ep53 step 2360/4500 lr=3.38e-05 loss=0.0683
+  ep53 step 2380/4500 lr=3.35e-05 loss=0.0662
+ep053 lr=3.35e-05 | train 0.0707 val 0.0728 | miou_all 0.9735 【miou_fg 0.9703】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.952 power_drill 0.970 wood_block 0.971 | 9s
+  ep54 step 2400/4500 lr=3.32e-05 loss=0.0801
+  ep54 step 2420/4500 lr=3.30e-05 loss=0.0679
+ep054 lr=3.28e-05 | train 0.0656 val 0.0721 | miou_all 0.9763 【miou_fg 0.9734】 | apple 0.984 tuna_fish_can 0.976 plastic_bottle 0.956 power_drill 0.973 wood_block 0.978 | 9s
+  -> 新高，已保存 best (miou_fg=0.9734)
+  ep55 step 2440/4500 lr=3.27e-05 loss=0.0576
+  ep55 step 2460/4500 lr=3.24e-05 loss=0.0765
+ep055 lr=3.22e-05 | train 0.0690 val 0.0716 | miou_all 0.9741 【miou_fg 0.9710】 | apple 0.981 tuna_fish_can 0.975 plastic_bottle 0.953 power_drill 0.971 wood_block 0.975 | 9s
+  ep56 step 2480/4500 lr=3.21e-05 loss=0.0393
+  ep56 step 2500/4500 lr=3.18e-05 loss=0.0535
+  ep56 step 2520/4500 lr=3.15e-05 loss=0.0741
+ep056 lr=3.15e-05 | train 0.0741 val 0.0716 | miou_all 0.9719 【miou_fg 0.9685】 | apple 0.981 tuna_fish_can 0.974 plastic_bottle 0.941 power_drill 0.968 wood_block 0.978 | 9s
+  ep57 step 2540/4500 lr=3.12e-05 loss=0.0681
+  ep57 step 2560/4500 lr=3.10e-05 loss=0.0592
+ep057 lr=3.09e-05 | train 0.0606 val 0.0712 | miou_all 0.9739 【miou_fg 0.9707】 | apple 0.983 tuna_fish_can 0.971 plastic_bottle 0.949 power_drill 0.973 wood_block 0.976 | 9s
+  ep58 step 2580/4500 lr=3.07e-05 loss=0.0654
+  ep58 step 2600/4500 lr=3.04e-05 loss=0.0568
+ep058 lr=3.02e-05 | train 0.0562 val 0.0708 | miou_all 0.9744 【miou_fg 0.9713】 | apple 0.983 tuna_fish_can 0.973 plastic_bottle 0.954 power_drill 0.971 wood_block 0.975 | 9s
+  ep59 step 2620/4500 lr=3.01e-05 loss=0.0709
+  ep59 step 2640/4500 lr=2.98e-05 loss=0.0730
+ep059 lr=2.96e-05 | train 0.0807 val 0.0702 | miou_all 0.9744 【miou_fg 0.9711】 | apple 0.985 tuna_fish_can 0.976 plastic_bottle 0.950 power_drill 0.970 wood_block 0.975 | 9s
+  ep60 step 2660/4500 lr=2.95e-05 loss=0.0398
+  ep60 step 2680/4500 lr=2.92e-05 loss=0.0514
+  ep60 step 2700/4500 lr=2.89e-05 loss=0.0598
+ep060 lr=2.89e-05 | train 0.0598 val 0.0697 | miou_all 0.9739 【miou_fg 0.9708】 | apple 0.984 tuna_fish_can 0.974 plastic_bottle 0.951 power_drill 0.968 wood_block 0.977 | 9s
+  ep61 step 2720/4500 lr=2.86e-05 loss=0.0664
+  ep61 step 2740/4500 lr=2.84e-05 loss=0.0652
+ep061 lr=2.83e-05 | train 0.0664 val 0.0706 | miou_all 0.9751 【miou_fg 0.9720】 | apple 0.983 tuna_fish_can 0.975 plastic_bottle 0.956 power_drill 0.970 wood_block 0.976 | 9s
+  ep62 step 2760/4500 lr=2.81e-05 loss=0.0620
+  ep62 step 2780/4500 lr=2.78e-05 loss=0.0589
+ep062 lr=2.76e-05 | train 0.0542 val 0.0685 | miou_all 0.9765 【miou_fg 0.9737】 | apple 0.986 tuna_fish_can 0.978 plastic_bottle 0.953 power_drill 0.974 wood_block 0.978 | 8s
+  -> 新高，已保存 best (miou_fg=0.9737)
+  ep63 step 2800/4500 lr=2.75e-05 loss=0.0701
+  ep63 step 2820/4500 lr=2.72e-05 loss=0.0541
+ep063 lr=2.70e-05 | train 0.0493 val 0.0695 | miou_all 0.9747 【miou_fg 0.9716】 | apple 0.984 tuna_fish_can 0.972 plastic_bottle 0.959 power_drill 0.971 wood_block 0.972 | 8s
+  ep64 step 2840/4500 lr=2.69e-05 loss=0.0709
+  ep64 step 2860/4500 lr=2.66e-05 loss=0.0838
+  ep64 step 2880/4500 lr=2.63e-05 loss=0.0706
+ep064 lr=2.63e-05 | train 0.0706 val 0.0687 | miou_all 0.9758 【miou_fg 0.9727】 | apple 0.984 tuna_fish_can 0.976 plastic_bottle 0.956 power_drill 0.974 wood_block 0.974 | 8s
+  ep65 step 2900/4500 lr=2.60e-05 loss=0.0449
+  ep65 step 2920/4500 lr=2.57e-05 loss=0.0502
+ep065 lr=2.57e-05 | train 0.0488 val 0.0691 | miou_all 0.9745 【miou_fg 0.9714】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.952 power_drill 0.972 wood_block 0.974 | 8s
+  ep66 step 2940/4500 lr=2.54e-05 loss=0.0686
+  ep66 step 2960/4500 lr=2.51e-05 loss=0.0595
+ep066 lr=2.50e-05 | train 0.0583 val 0.0689 | miou_all 0.9747 【miou_fg 0.9717】 | apple 0.983 tuna_fish_can 0.972 plastic_bottle 0.958 power_drill 0.972 wood_block 0.974 | 9s
+  ep67 step 2980/4500 lr=2.49e-05 loss=0.0365
+  ep67 step 3000/4500 lr=2.46e-05 loss=0.0521
+ep067 lr=2.43e-05 | train 0.0551 val 0.0679 | miou_all 0.9755 【miou_fg 0.9725】 | apple 0.986 tuna_fish_can 0.973 plastic_bottle 0.953 power_drill 0.973 wood_block 0.978 | 9s
+  ep68 step 3020/4500 lr=2.43e-05 loss=0.0330
+  ep68 step 3040/4500 lr=2.40e-05 loss=0.0358
+  ep68 step 3060/4500 lr=2.37e-05 loss=0.0395
+ep068 lr=2.37e-05 | train 0.0395 val 0.0677 | miou_all 0.9753 【miou_fg 0.9723】 | apple 0.985 tuna_fish_can 0.977 plastic_bottle 0.955 power_drill 0.971 wood_block 0.973 | 9s
+  ep69 step 3080/4500 lr=2.34e-05 loss=0.0682
+  ep69 step 3100/4500 lr=2.31e-05 loss=0.0694
+ep069 lr=2.30e-05 | train 0.0653 val 0.0677 | miou_all 0.9762 【miou_fg 0.9732】 | apple 0.986 tuna_fish_can 0.977 plastic_bottle 0.955 power_drill 0.973 wood_block 0.975 | 9s
+  ep70 step 3120/4500 lr=2.28e-05 loss=0.0816
+  ep70 step 3140/4500 lr=2.25e-05 loss=0.0694
+ep070 lr=2.23e-05 | train 0.0661 val 0.0683 | miou_all 0.9755 【miou_fg 0.9724】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.958 power_drill 0.972 wood_block 0.973 | 9s
+  ep71 step 3160/4500 lr=2.22e-05 loss=0.0857
+  ep71 step 3180/4500 lr=2.19e-05 loss=0.0729
+ep071 lr=2.17e-05 | train 0.0678 val 0.0674 | miou_all 0.9741 【miou_fg 0.9709】 | apple 0.983 tuna_fish_can 0.973 plastic_bottle 0.950 power_drill 0.973 wood_block 0.976 | 9s
+  ep72 step 3200/4500 lr=2.16e-05 loss=0.0984
+  ep72 step 3220/4500 lr=2.13e-05 loss=0.0749
+  ep72 step 3240/4500 lr=2.10e-05 loss=0.0759
+ep072 lr=2.10e-05 | train 0.0759 val 0.0668 | miou_all 0.9759 【miou_fg 0.9729】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.956 power_drill 0.972 wood_block 0.977 | 9s
+  ep73 step 3260/4500 lr=2.07e-05 loss=0.0511
+  ep73 step 3280/4500 lr=2.04e-05 loss=0.0470
+ep073 lr=2.03e-05 | train 0.0456 val 0.0665 | miou_all 0.9771 【miou_fg 0.9742】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.957 power_drill 0.974 wood_block 0.980 | 9s
+  -> 新高，已保存 best (miou_fg=0.9742)
+  ep74 step 3300/4500 lr=2.01e-05 loss=0.0569
+  ep74 step 3320/4500 lr=1.98e-05 loss=0.0449
+ep074 lr=1.96e-05 | train 0.0463 val 0.0669 | miou_all 0.9761 【miou_fg 0.9731】 | apple 0.986 tuna_fish_can 0.976 plastic_bottle 0.957 power_drill 0.973 wood_block 0.974 | 9s
+  ep75 step 3340/4500 lr=1.95e-05 loss=0.0537
+  ep75 step 3360/4500 lr=1.92e-05 loss=0.0409
+ep075 lr=1.90e-05 | train 0.0459 val 0.0661 | miou_all 0.9753 【miou_fg 0.9723】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.954 power_drill 0.972 wood_block 0.977 | 9s
+  ep76 step 3380/4500 lr=1.89e-05 loss=0.0995
+  ep76 step 3400/4500 lr=1.86e-05 loss=0.0593
+  ep76 step 3420/4500 lr=1.83e-05 loss=0.0596
+ep076 lr=1.83e-05 | train 0.0596 val 0.0655 | miou_all 0.9765 【miou_fg 0.9736】 | apple 0.985 tuna_fish_can 0.978 plastic_bottle 0.955 power_drill 0.973 wood_block 0.978 | 9s
+  ep77 step 3440/4500 lr=1.80e-05 loss=0.0433
+  ep77 step 3460/4500 lr=1.77e-05 loss=0.0511
+ep077 lr=1.76e-05 | train 0.0602 val 0.0664 | miou_all 0.9749 【miou_fg 0.9719】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.954 power_drill 0.972 wood_block 0.974 | 9s
+  ep78 step 3480/4500 lr=1.74e-05 loss=0.0552
+  ep78 step 3500/4500 lr=1.71e-05 loss=0.0578
+ep078 lr=1.69e-05 | train 0.0564 val 0.0663 | miou_all 0.9761 【miou_fg 0.9731】 | apple 0.985 tuna_fish_can 0.973 plastic_bottle 0.961 power_drill 0.973 wood_block 0.975 | 9s
+  ep79 step 3520/4500 lr=1.67e-05 loss=0.0682
+  ep79 step 3540/4500 lr=1.64e-05 loss=0.0551
+ep079 lr=1.62e-05 | train 0.0664 val 0.0663 | miou_all 0.9751 【miou_fg 0.9720】 | apple 0.984 tuna_fish_can 0.974 plastic_bottle 0.958 power_drill 0.972 wood_block 0.973 | 9s
+  ep80 step 3560/4500 lr=1.61e-05 loss=0.0341
+  ep80 step 3580/4500 lr=1.58e-05 loss=0.0549
+  ep80 step 3600/4500 lr=1.55e-05 loss=0.0493
+ep080 lr=1.55e-05 | train 0.0493 val 0.0652 | miou_all 0.9769 【miou_fg 0.9740】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.959 power_drill 0.971 wood_block 0.980 | 9s
+  ep81 step 3620/4500 lr=1.52e-05 loss=0.0740
+  ep81 step 3640/4500 lr=1.49e-05 loss=0.0700
+ep081 lr=1.48e-05 | train 0.0660 val 0.0652 | miou_all 0.9761 【miou_fg 0.9732】 | apple 0.984 tuna_fish_can 0.976 plastic_bottle 0.955 power_drill 0.973 wood_block 0.978 | 9s
+  ep82 step 3660/4500 lr=1.46e-05 loss=0.0440
+  ep82 step 3680/4500 lr=1.43e-05 loss=0.0471
+ep082 lr=1.41e-05 | train 0.0550 val 0.0648 | miou_all 0.9762 【miou_fg 0.9733】 | apple 0.985 tuna_fish_can 0.976 plastic_bottle 0.953 power_drill 0.973 wood_block 0.980 | 9s
+  ep83 step 3700/4500 lr=1.40e-05 loss=0.0683
+  ep83 step 3720/4500 lr=1.36e-05 loss=0.0611
+ep083 lr=1.34e-05 | train 0.0550 val 0.0658 | miou_all 0.9754 【miou_fg 0.9723】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.954 power_drill 0.973 wood_block 0.974 | 9s
+  ep84 step 3740/4500 lr=1.33e-05 loss=0.0660
+  ep84 step 3760/4500 lr=1.30e-05 loss=0.0399
+  ep84 step 3780/4500 lr=1.27e-05 loss=0.0365
+ep084 lr=1.27e-05 | train 0.0365 val 0.0650 | miou_all 0.9769 【miou_fg 0.9742】 | apple 0.985 tuna_fish_can 0.978 plastic_bottle 0.957 power_drill 0.974 wood_block 0.977 | 9s
+  ep85 step 3800/4500 lr=1.24e-05 loss=0.0592
+  ep85 step 3820/4500 lr=1.21e-05 loss=0.0585
+ep085 lr=1.20e-05 | train 0.0559 val 0.0659 | miou_all 0.9752 【miou_fg 0.9723】 | apple 0.985 tuna_fish_can 0.974 plastic_bottle 0.957 power_drill 0.971 wood_block 0.975 | 9s
+  ep86 step 3840/4500 lr=1.17e-05 loss=0.0421
+  ep86 step 3860/4500 lr=1.14e-05 loss=0.0416
+ep086 lr=1.13e-05 | train 0.0403 val 0.0645 | miou_all 0.9773 【miou_fg 0.9745】 | apple 0.985 tuna_fish_can 0.976 plastic_bottle 0.960 power_drill 0.973 wood_block 0.979 | 9s
+  -> 新高，已保存 best (miou_fg=0.9745)
+  ep87 step 3880/4500 lr=1.11e-05 loss=0.0476
+  ep87 step 3900/4500 lr=1.08e-05 loss=0.0589
+ep087 lr=1.05e-05 | train 0.0579 val 0.0648 | miou_all 0.9766 【miou_fg 0.9738】 | apple 0.984 tuna_fish_can 0.976 plastic_bottle 0.958 power_drill 0.974 wood_block 0.977 | 9s
+  ep88 step 3920/4500 lr=1.05e-05 loss=0.0294
+  ep88 step 3940/4500 lr=1.01e-05 loss=0.0389
+  ep88 step 3960/4500 lr=9.80e-06 loss=0.0577
+ep088 lr=9.80e-06 | train 0.0577 val 0.0649 | miou_all 0.9762 【miou_fg 0.9733】 | apple 0.984 tuna_fish_can 0.973 plastic_bottle 0.958 power_drill 0.974 wood_block 0.978 | 9s
+  ep89 step 3980/4500 lr=9.48e-06 loss=0.0508
+  ep89 step 4000/4500 lr=9.15e-06 loss=0.0540
+ep089 lr=9.07e-06 | train 0.0512 val 0.0645 | miou_all 0.9776 【miou_fg 0.9749】 | apple 0.985 tuna_fish_can 0.977 plastic_bottle 0.960 power_drill 0.973 wood_block 0.979 | 9s
+  -> 新高，已保存 best (miou_fg=0.9749)
+  ep90 step 4020/4500 lr=8.82e-06 loss=0.0533
+  ep90 step 4040/4500 lr=8.49e-06 loss=0.0507
+ep090 lr=8.32e-06 | train 0.0577 val 0.0642 | miou_all 0.9770 【miou_fg 0.9742】 | apple 0.984 tuna_fish_can 0.976 plastic_bottle 0.957 power_drill 0.975 wood_block 0.979 | 9s
+  ep91 step 4060/4500 lr=8.16e-06 loss=0.0495
+  ep91 step 4080/4500 lr=7.82e-06 loss=0.0539
+ep091 lr=7.57e-06 | train 0.0496 val 0.0644 | miou_all 0.9774 【miou_fg 0.9747】 | apple 0.985 tuna_fish_can 0.976 plastic_bottle 0.960 power_drill 0.975 wood_block 0.978 | 9s
+  ep92 step 4100/4500 lr=7.49e-06 loss=0.0300
+  ep92 step 4120/4500 lr=7.15e-06 loss=0.0459
+  ep92 step 4140/4500 lr=6.81e-06 loss=0.0608
+ep092 lr=6.81e-06 | train 0.0608 val 0.0652 | miou_all 0.9766 【miou_fg 0.9737】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.957 power_drill 0.974 wood_block 0.978 | 9s
+  ep93 step 4160/4500 lr=6.47e-06 loss=0.0477
+  ep93 step 4180/4500 lr=6.13e-06 loss=0.0521
+ep093 lr=6.04e-06 | train 0.0572 val 0.0647 | miou_all 0.9768 【miou_fg 0.9740】 | apple 0.985 tuna_fish_can 0.977 plastic_bottle 0.957 power_drill 0.974 wood_block 0.977 | 9s
+  ep94 step 4200/4500 lr=5.78e-06 loss=0.0331
+  ep94 step 4220/4500 lr=5.44e-06 loss=0.0465
+ep094 lr=5.26e-06 | train 0.0466 val 0.0646 | miou_all 0.9762 【miou_fg 0.9732】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.957 power_drill 0.972 wood_block 0.978 | 9s
+  ep95 step 4240/4500 lr=5.09e-06 loss=0.0313
+  ep95 step 4260/4500 lr=4.73e-06 loss=0.0395
+ep095 lr=4.47e-06 | train 0.0443 val 0.0644 | miou_all 0.9764 【miou_fg 0.9736】 | apple 0.985 tuna_fish_can 0.975 plastic_bottle 0.956 power_drill 0.975 wood_block 0.977 | 9s
+  ep96 step 4280/4500 lr=4.38e-06 loss=0.0298
+  ep96 step 4300/4500 lr=4.02e-06 loss=0.0460
+  ep96 step 4320/4500 lr=3.66e-06 loss=0.0501
+ep096 lr=3.66e-06 | train 0.0501 val 0.0646 | miou_all 0.9758 【miou_fg 0.9728】 | apple 0.984 tuna_fish_can 0.975 plastic_bottle 0.955 power_drill 0.973 wood_block 0.977 | 9s
+  ep97 step 4340/4500 lr=3.29e-06 loss=0.0568
+  ep97 step 4360/4500 lr=2.92e-06 loss=0.0636
+ep097 lr=2.83e-06 | train 0.0601 val 0.0647 | miou_all 0.9760 【miou_fg 0.9731】 | apple 0.985 tuna_fish_can 0.974 plastic_bottle 0.957 power_drill 0.972 wood_block 0.977 | 9s
+  ep98 step 4380/4500 lr=2.55e-06 loss=0.0289
+  ep98 step 4400/4500 lr=2.16e-06 loss=0.0403
+ep098 lr=1.97e-06 | train 0.0460 val 0.0640 | miou_all 0.9776 【miou_fg 0.9748】 | apple 0.985 tuna_fish_can 0.977 plastic_bottle 0.958 power_drill 0.976 wood_block 0.978 | 9s
+  ep99 step 4420/4500 lr=1.77e-06 loss=0.0464
+  ep99 step 4440/4500 lr=1.37e-06 loss=0.0467
+ep099 lr=1.07e-06 | train 0.0494 val 0.0638 | miou_all 0.9766 【miou_fg 0.9737】 | apple 0.985 tuna_fish_can 0.977 plastic_bottle 0.956 power_drill 0.974 wood_block 0.977 | 9s
+  ep100 step 4460/4500 lr=9.61e-07 loss=0.0663
+  ep100 step 4480/4500 lr=5.27e-07 loss=0.0582
+  ep100 step 4500/4500 lr=3.40e-08 loss=0.0683
+ep100 lr=3.40e-08 | train 0.0683 val 0.0644 | miou_all 0.9773 【miou_fg 0.9746】 | apple 0.985 tuna_fish_can 0.974 plastic_bottle 0.958 power_drill 0.976 wood_block 0.980 | 9s
+
+训练结束。最优 miou_fg=0.9749 (ep89)，模型在 /home/dxy/projects/ycb/dataset_seg/ckpt_v2/best

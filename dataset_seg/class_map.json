@@ -1,0 +1,22 @@
+{
+  "1": {
+    "name": "apple",
+    "ycb": "003"
+  },
+  "2": {
+    "name": "tuna_fish_can",
+    "ycb": "007"
+  },
+  "3": {
+    "name": "plastic_bottle",
+    "ycb": "025"
+  },
+  "4": {
+    "name": "power_drill",
+    "ycb": "035"
+  },
+  "5": {
+    "name": "wood_block",
+    "ycb": "036"
+  }
+}
